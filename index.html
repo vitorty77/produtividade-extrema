@@ -1,136 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Produtividade Extrema — Edição Premium</title>
 
-<meta name="description" content="Produtividade Extrema: como produzir mais, executar melhor e acelerar resultados financeiros com foco, estratégia e alta performance." />
+<meta name="description" content="Ebook premium sobre foco absoluto, execução estratégica e construção de riqueza com alta performance.">
 
-<!-- Tailwind -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap">
 
-<!-- Icons -->
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
 <style>
+/* Base */
 body {
     margin: 0;
-    padding: 0;
     background-color: #050505;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* Página / Seção */
+/* Página */
 .page {
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 100px 20px;
     position: relative;
     background-color: #080808;
     border-bottom: 1px solid #1a1a1a;
 }
 
-/* Decorative elements */
-.gold-line-top,
-.gold-line-bottom {
-    position: absolute;
-    width: 2px;
-    height: 100px;
-    background-color: #D4AF37;
-    opacity: 0.8;
-}
-
-.gold-line-top { top: 60px; left: 50%; }
-.gold-line-bottom { bottom: 60px; left: 50%; }
-
-.border-frame {
+/* Moldura */
+.frame {
     position: absolute;
     inset: 20px;
     border: 1px solid rgba(212, 175, 55, 0.15);
     pointer-events: none;
 }
 
-.corner-accent {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #D4AF37;
-    opacity: 0.6;
+/* Tipografia */
+.gold {
+    color: #D4AF37;
 }
 
-.top-left { top: 20px; left: 20px; border-right: 0; border-bottom: 0; }
-.top-right { top: 20px; right: 20px; border-left: 0; border-bottom: 0; }
-.bottom-left { bottom: 20px; left: 20px; border-right: 0; border-top: 0; }
-.bottom-right { bottom: 20px; right: 20px; border-left: 0; border-top: 0; }
-
-.main-title {
+.title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 8vw, 82px);
+    font-size: clamp(38px, 7vw, 78px);
     text-transform: uppercase;
-    color: #D4AF37;
     letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .subtitle {
-    font-size: clamp(16px, 3vw, 24px);
-    font-weight: 300;
-    color: #e0e0e0;
+    font-size: clamp(16px, 3vw, 22px);
+    text-transform: uppercase;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    color: #cccccc;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.highlight-box {
-    background-color: rgba(212, 175, 55, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 14px 28px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.highlight-text {
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 54px);
     color: #D4AF37;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.author-tag {
-    font-size: 14px;
-    color: #888;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 80px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
-    width: 240px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-.grid-overlay {
+.text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+/* Lista */
+.list {
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    margin-bottom: 18px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.list li::before {
+    content: "✦";
     position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.25;
-    pointer-events: none;
+    left: 0;
+    color: #D4AF37;
 }
 </style>
 </head>
@@ -138,58 +110,97 @@ body {
 <body>
 
 <!-- CAPA -->
-<section class="page flex flex-col justify-center items-center text-center">
+<section class="page flex flex-col justify-center text-center">
+    <div class="frame"></div>
 
-    <div class="grid-overlay"></div>
-    <div class="border-frame"></div>
+    <p class="gold tracking-widest uppercase mb-6">Edição Premium</p>
 
-    <div class="corner-accent top-left"></div>
-    <div class="corner-accent top-right"></div>
-    <div class="corner-accent bottom-left"></div>
-    <div class="corner-accent bottom-right"></div>
+    <h1 class="title gold">
+        Produtividade<br>Extrema
+    </h1>
 
-    <div class="gold-line-top"></div>
-    <div class="gold-line-bottom"></div>
+    <p class="subtitle">
+        Como produzir mais, executar melhor e acelerar resultados financeiros
+    </p>
 
-    <div class="relative z-10">
+    <p class="mt-20 text-gray-500 tracking-widest uppercase">
+        Manual de Elite
+    </p>
+</section>
 
-        <div class="highlight-box">
-            <i class="fas fa-crown text-yellow-600"></i>
-            <span class="highlight-text">Edição Premium • Alta Performance</span>
-        </div>
+<!-- INTRODUÇÃO -->
+<section class="page">
+    <div class="frame"></div>
 
-        <h1 class="main-title">
-            Produtividade<br>Extrema
-        </h1>
+    <h2 class="section-title">Introdução</h2>
 
-        <h2 class="subtitle">
-            Como produzir mais, executar melhor e<br>
-            acelerar resultados financeiros
-        </h2>
+    <p class="text">
+        Produtividade extrema não é trabalhar mais horas, e sim direcionar
+        energia apenas para o que gera resultado real. Este manual foi criado
+        para quem busca alta performance, clareza mental e crescimento financeiro.
+    </p>
+</section>
 
-        <div class="flex flex-wrap justify-center gap-6 mt-6 text-gray-400 text-sm tracking-widest uppercase">
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-yellow-600"></i>
-                <span>Foco Absoluto</span>
-            </div>
+<!-- CAPÍTULO 1 -->
+<section class="page">
+    <div class="frame"></div>
 
-            <div class="flex items-center gap-2">
-                <i class="fas fa-chart-line text-yellow-600"></i>
-                <span>Execução Estratégica</span>
-            </div>
+    <h2 class="section-title">Capítulo 1 — Foco Absoluto</h2>
 
-            <div class="flex items-center gap-2">
-                <i class="fas fa-coins text-yellow-600"></i>
-                <span>Construção de Riqueza</span>
-            </div>
-        </div>
+    <p class="text mb-10">
+        O foco é o ativo mais valioso da era digital. Pessoas produtivas eliminam
+        distrações e executam com intensidade total nas tarefas certas.
+    </p>
 
-        <div class="author-tag">
-            Manual de Elite
-        </div>
+    <ul class="list text">
+        <li>Eliminar distrações irrelevantes</li>
+        <li>Executar tarefas em blocos profundos</li>
+        <li>Definir prioridades claras</li>
+    </ul>
+</section>
 
-    </div>
+<!-- CAPÍTULO 2 -->
+<section class="page">
+    <div class="frame"></div>
+
+    <h2 class="section-title">Capítulo 2 — Execução Estratégica</h2>
+
+    <p class="text">
+        Ideias sem execução não geram riqueza. A execução estratégica é baseada
+        em clareza, consistência e métricas. Pequenas ações bem feitas superam
+        grandes planos nunca executados.
+    </p>
+</section>
+
+<!-- CAPÍTULO 3 -->
+<section class="page">
+    <div class="frame"></div>
+
+    <h2 class="section-title">Capítulo 3 — Construção de Riqueza</h2>
+
+    <p class="text">
+        Riqueza é construída através de sistemas. Quem depende apenas do próprio
+        esforço sempre estará limitado pelo tempo. Sistemas trabalham mesmo
+        quando você não está presente.
+    </p>
+</section>
+
+<!-- CONCLUSÃO -->
+<section class="page flex flex-col justify-center text-center">
+    <div class="frame"></div>
+
+    <h2 class="section-title">Conclusão</h2>
+
+    <p class="text">
+        Produtividade extrema é uma decisão diária. Ao dominar foco, execução
+        estratégica e sistemas, você constrói uma base sólida para liberdade
+        financeira e alta performance sustentável.
+    </p>
+
+    <p class="mt-20 gold tracking-widest uppercase">
+        Fim do Manual
+    </p>
 </section>
 
 </body>
-            </html>
+        </html>
